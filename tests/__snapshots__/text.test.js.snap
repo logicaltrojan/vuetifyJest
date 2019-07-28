@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`myText renders prop correctly 1`] = `
+<div>
+  <div class="v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field">
+    <div class="v-input__control">
+      <div class="v-input__slot">
+        <div class="v-text-field__slot"><input id="input-17" type="text"></div>
+      </div>
+      <div class="v-text-field__details">
+        <div class="v-messages theme--light"><span name="message-transition" tag="div" class="v-messages__wrapper"></span></div>
+      </div>
+    </div>
+  </div> <button>ToCONFIRM</button>
+</div>
+`;

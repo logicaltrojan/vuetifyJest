@@ -30,6 +30,7 @@
     "eslint-loader": "^2.1.1",
     "eslint-plugin-vue": "^4.0.0",
     "jest": "^24.8.0",
+    "jest-serializer-vue": "^2.0.2",
     "jest-vue-preprocessor": "^1.5.0",
     "sass": "^1.17.4",
     "sass-loader": "^7.1.0",
@@ -47,20 +48,21 @@
       "json",
       "vue"
     ],
-    "setupFilesAfterEnv" : [ 
+    "setupFilesAfterEnv": [
       "<rootDir>/jest-setup.js"
     ],
     "transform": {
       ".*\\.(vue)$": "vue-jest",
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
     },
-    "moduleNameMapper" : {
-      "^@/(.*)$" : "<rootDir>/$1"
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1"
     },
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,vue}",
       "!**/node_modules/**"
-    ]
+    ],
+    "snapshotSerializers": ["jest-serializer-vue"]
   }
 }

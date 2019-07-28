@@ -22,7 +22,7 @@ export default {
     },
     methods : {
         confirm(){
-            this.$emit('confirm', childData);
+            this.$emit('confirm', this.childData);
         }
     }
 

@@ -20,15 +20,43 @@ describe('myText', ()=> {
     })
 
     test('renders prop correctly', ()=>{
-        const wp = mount(myText);
-        const testData = "hello2325"
-        wp.setProps({textData : testData});
+        const testData = "hello2132312"
+        const wp = mount(myText, { 
+            propsData : {
+                textData : testData
+            }
+        });
         
-
         expect(wp.vm.childData).toBe(testData);
+        expect(wp.html()).toMatchSnapshot();
+    })
+
+    test('input makes diffrent', () => {
+        var parent = mount({
+            template : '<div><my-text :textData="parentData" @confirm="meme"></my-text></div>',
+            data(){ 
+                return {
+                 parentData : "testData23"
+                }
+            },
+            methods : {
+                meme(val){
+                    this.parentData = val;
+                }
+            },
+            components : { 'my-text' : myText}
+        })
+
+        expect(parent.find('input')).toBeTruthy();
+        var innerInputComponent = parent.find('input')
+        const changTestData = 'changedInput'
+        innerInputComponent.element.value = changTestData;
+        innerInputComponent.trigger('input');
+
+        parent.find('button').trigger('click');
+        expect(parent.vm.parentData).toBe(changTestData);
 
         
-     
     })
 
 })
