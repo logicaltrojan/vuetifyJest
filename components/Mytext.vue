@@ -23,7 +23,12 @@ export default {
     methods : {
         confirm(){
             this.$emit('confirm', this.childData);
-        }
+        },
+        async setData(){
+                    await axios.get('https://jsonplaceholder.typicode.com/todos/1').then(
+                        this.parentData = 'axiosDatafromServer'
+                    )
+                }
     }
 
     

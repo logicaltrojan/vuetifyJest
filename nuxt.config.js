@@ -15,7 +15,8 @@ module.exports = {
   },
   //modules
   modules : [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/axios'
   ],
   /*
   ** Customize the progress bar color

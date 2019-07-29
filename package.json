@@ -63,6 +63,8 @@
       "**/*.{js,vue}",
       "!**/node_modules/**"
     ],
-    "snapshotSerializers": ["jest-serializer-vue"]
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ]
   }
 }
