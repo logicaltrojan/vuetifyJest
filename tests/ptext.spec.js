@@ -1,14 +1,12 @@
 
 import { mount } from '@vue/test-utils'
 import PText from '@/components/text.vue'
-
 import axios from 'axios'
 
-jest.mock(axios, () => ({
-    get() {
-        return Promise.resolve('AxiosResult')
-    }
-}));
+// jest.mock('@nuxtjs/axios', () => ({
+ 
+//     get : jest.fn(()=> Promise.resolve({data : "axiosData"}))
+// }));
 
 
 describe('PText', ()=> {
@@ -32,9 +30,13 @@ describe('PText', ()=> {
             },
             methods : {
                 async setData(){
-                    await axios.get('https://jsonplaceholder.typicode.com/todos/1').then(
-                        this.parentData = 'axiosDatafromServer'
-                    )
+                    const getPromise = axios.get('https://jsonplaceholder.typicode.com/todos/1')
+                    await getPromise.then(result => { 
+                        this.parentData = result.data;
+                    })
+
+                    return getPromise;
+                    
                 }
             }
         })
@@ -101,7 +103,20 @@ describe('PText', ()=> {
         
     })
 
-    test('sets default value properly in async', ()=>{
+    test('sets default value properly in async', async ()=>{
+
+        axios.get.mockImplementationOnce(()=> Promise.resolve({
+            data : "axiosData"
+        }))
+        
+        const result = await parent.vm.setData();
+
+
+        expect(axios.get).toHaveBeenCalledTimes(1);
+        expect(axios.get).toHaveBeenCalledWith("https://jsonplaceholder.typicode.com/todos/1");
+        expect(result).toEqual({data : 'axiosData'});
+        expect(parent.vm.parentData).toBe('axiosData');
+        expect(parent.find('input').element.value).toBe('axiosData')
 
     })
 })

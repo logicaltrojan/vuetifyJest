@@ -2,8 +2,9 @@
   <div>
     <counter></counter>
     <my-text textData="Helloooo"></my-text>
-    <p-text v-model="parentData"></p-text>
+    <p-text ref='ptext' :error="true" v-model="parentData" label="hello"></p-text>
 
+    <button @click='errorInvoke'>ERROR INVOKE</button>
     {{parentData}}
   </div>
 </template>
@@ -26,9 +27,12 @@ export default {
   },
   methods : {
      async setData(){
-        await axios.get('https://jsonplaceholder.typicode.com/todos/1').then(
-            this.parentData = 'axiosDatafromServer'
+        await this.$axios.get('https://jsonplaceholder.typicode.com/todos/1').then(
+            // this.parentData = 'axiosDatafromServer'
         )
+    },
+    errorInvoke(){
+      this.$refs.ptext.setError('testError')
     }
   }
 

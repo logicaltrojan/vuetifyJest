@@ -12,11 +12,32 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
-  },
+  }, 
   //modules
   modules : [
     '@nuxtjs/vuetify',
     '@nuxtjs/axios'
+  ],
+  axios : {
+
+  },
+
+   rules: [
+    {
+      test: /\.s(c|a)ss$/,
+      use: [
+        'vue-style-loader',
+        'css-loader',
+        {
+          loader: 'sass-loader',
+          options: {
+            implementation: require('sass'),
+            fiber: require('fibers'),
+            indentedSyntax: true // optional
+          }
+        }
+      ]
+    }
   ],
   /*
   ** Customize the progress bar color
