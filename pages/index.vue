@@ -6,19 +6,21 @@
 
     <button @click='errorInvoke'>ERROR INVOKE</button>
     {{parentData}}
+    <my-button></my-button>
   </div>
 </template>
 <script>
 import Counter from '@/components/Counter.vue'
 import MyText from '@/components/Mytext'
 import PText from '@/components/text'
+import MyButton from '@/components/Mybutton.vue'
 
 export default {
   created(){
     this.setData();
   },
   components : {
-    Counter, MyText, PText
+    Counter, MyText, PText, MyButton
   },
   data(){
     return {
