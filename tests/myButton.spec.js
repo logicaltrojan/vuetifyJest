@@ -44,6 +44,6 @@ describe("MyButton" , ()=> {
         wrapper.trigger('click');
         
         expect(myClick).toHaveBeenCalledTimes(1);
-
     })
+
 })

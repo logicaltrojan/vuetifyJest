@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582556561204" clover="3.2.0">
-  <project timestamp="1582556561204" name="All files">
-    <metrics statements="132" coveredstatements="7" conditionals="335" coveredconditionals="2" methods="70" coveredmethods="6" elements="537" coveredelements="15" complexity="0" loc="132" ncloc="132" packages="7" files="12" classes="12"/>
+<coverage generated="1583843708029" clover="3.2.0">
+  <project timestamp="1583843708029" name="All files">
+    <metrics statements="139" coveredstatements="7" conditionals="337" coveredconditionals="2" methods="71" coveredmethods="1" elements="547" coveredelements="10" complexity="0" loc="139" ncloc="139" packages="7" files="13" classes="13"/>
     <package name="vuetifyJest">
       <metrics statements="3" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="nuxt.config.js" path="/home/nvgn/nuxtProject/vuetifyJest/nuxt.config.js">
@@ -12,10 +12,10 @@
       </file>
     </package>
     <package name="vuetifyJest.components">
-      <metrics statements="11" coveredstatements="7" conditionals="5" coveredconditionals="2" methods="10" coveredmethods="6"/>
+      <metrics statements="18" coveredstatements="7" conditionals="7" coveredconditionals="2" methods="11" coveredmethods="1"/>
       <file name="Counter.vue" path="/home/nvgn/nuxtProject/vuetifyJest/components/Counter.vue">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="11" count="3" type="stmt"/>
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
       </file>
       <file name="Mybutton.vue" path="/home/nvgn/nuxtProject/vuetifyJest/components/Mybutton.vue">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -23,16 +23,26 @@
         <line num="16" count="0" type="stmt"/>
       </file>
       <file name="Mytext.vue" path="/home/nvgn/nuxtProject/vuetifyJest/components/Mytext.vue">
-        <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="2" methods="4" coveredmethods="3"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="23" count="4" type="cond" truecount="0" falsecount="3"/>
-        <line num="25" count="1" type="stmt"/>
+        <metrics statements="3" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="25" count="0" type="stmt"/>
+      </file>
+      <file name="filter.js" path="/home/nvgn/nuxtProject/vuetifyJest/components/filter.js">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
       </file>
       <file name="text.vue" path="/home/nvgn/nuxtProject/vuetifyJest/components/text.vue">
-        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="22" count="18" type="stmt"/>
-        <line num="28" count="28" type="stmt"/>
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
       </file>
